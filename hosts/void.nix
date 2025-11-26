@@ -55,7 +55,7 @@ in
   users.users.god = {
     isNormalUser = true;
     description = "god";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     hashedPassword = "$6$RB2gdbENR0/ycvM6$QFnWxGOP2MIGmQBF4CL6n7epvspC1fSrtMwc2mWmaBFRn3IzsGlsj5A82PYgerQNIILCVrky50GmpxCJR8UyV0";
     shell = pkgs.zsh;
   };
