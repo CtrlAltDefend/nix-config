@@ -5,6 +5,12 @@
   # and the shortcuts it creates are not usable
   # installing these libs fix it
   # source: https://github.com/NixOS/nixpkgs/issues/240444
+
+
+  # System-level IntelliJ requirements (NOT user settings).
+  # Needed because JetBrains Toolbox installs proprietary binaries
+  # that require nix-ld + extra libraries.
+  # note: the rest is in home/jetbrains.nix for user related configuration
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
       SDL
@@ -72,6 +78,8 @@
       libudev0-shim
       libusb1
       libuuid
+      libva
+      libva-utils
       libvdpau
       libvorbis
       libvpx
@@ -120,5 +128,7 @@
       xorg.xkeyboardconfig
       xz
       zlib
+      xdg-desktop-portal
+      xdg-desktop-portal-wlr
     ];
 }

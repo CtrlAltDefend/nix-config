@@ -20,17 +20,19 @@ Update /etc/nixos/configuration.nix like that:
 
 ```
 
-Copy the code in ~/.flakes
+Copy the code in ~/Projects/nix/nix-config
+
+Move into that dir and then run the following commands.
 
 Apply the void hostname configuration by example:
 
 ```sh
-sudo nixos-rebuild switch --flake ~/.flakes#void
+sudo nixos-rebuild switch --flake .#void
 ```
 
 Apply the user god configuration by example:
 ```sh
-home-manager switch --flake ~/.flakes#god
+home-manager switch --flake .#god
 ```
 
 Done.

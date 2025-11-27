@@ -35,8 +35,8 @@ in
 
   services.dbus.enable = true;
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
+#  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ]; # help intellij webbrowser to work
   # Enable keyring (Keepass)
   #https://www.reddit.com/r/NixOS/comments/1auje1p/hyprland_and_secrets_management/
   services.gnome.gnome-keyring.enable = true;
@@ -45,24 +45,13 @@ in
   # System user
   #users.mutableUsers = false; # Prevent users from changing password or whatever -> config as code! 
  
-#  users.users.jesus = {
-#    isNormalUser = true;
-#    description = "test user";
-#    extraGroups = [ "networkmanager" "wheel" ];
-#    hashedPasswordFile = config.sops.secrets.user_god_password.path;
-#  };
-
   users.users.god = {
     isNormalUser = true;
     description = "god";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    hashedPassword = "$6$RB2gdbENR0/ycvM6$QFnWxGOP2MIGmQBF4CL6n7epvspC1fSrtMwc2mWmaBFRn3IzsGlsj5A82PYgerQNIILCVrky50GmpxCJR8UyV0";
+    hashedPasswordFile = config.sops.secrets.user_god_password.path;
     shell = pkgs.zsh;
   };
-
-  # Home Manager users
-# home-manager is now handled separatedly
-#  home-manager.users.god = import ../home/god.nix { inherit pkgs; }; 
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
