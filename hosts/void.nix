@@ -81,6 +81,11 @@ in
     mesa # includes VA-API support for Intel GPUs
     intel-media-driver # Intel specific    
 
+    # fix chrome browser in intellij
+    libvdpau
+    vulkan-loader
+
+
     # home-manager (That way it is usable)
     home-manager
 
