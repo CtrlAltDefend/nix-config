@@ -19,6 +19,7 @@
      vim
      wget
      htop
+     ctop # like htop but for containers
      vlc
      unzip
      
@@ -36,8 +37,18 @@
      firefox
 
      # IDEs
-     jetbrains-toolbox
+     mise
      vscode
+
+     # node
+     nodejs_24
+
+     # compilers
+     gcc # required for mise
+     gnumake # required for mise
+     gnupg # required for mise
+     python313 # required for mise
+
 
      # task management
      taskwarrior3

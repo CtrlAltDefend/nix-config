@@ -9,22 +9,8 @@ path = "/org/freedesktop/UPower/devices/line_power_AC"
 [[power_events.dbus_signal_match_rules]]
 object_path = "/org/freedesktop/UPower/devices/line_power_AC"
 
-[profiles.laptop]
-config_file = "/home/god/.flakes/home/modules/assets/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
-config_file_type = "template"
-[profiles.laptop.conditions]
-
-[[profiles.laptop.conditions.required_monitors]]
-description = "AU Optronics 0x3CAD"
-monitor_tag = "monitor0"
-
 [profiles.docked]
 config_file = "/home/god/.flakes/home/modules/assets/.config/hyprdynamicmonitors/hyprconfigs/docked.go.tmpl"
 config_file_type = "template"
-[profiles.docked.conditions]
-
-[[profiles.docked.conditions.required_monitors]]
-description = "Dell Inc. DELL U3421WE HW7M653"
-monitor_tag = "monitor1"
 
 
