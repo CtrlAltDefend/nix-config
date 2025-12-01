@@ -11,7 +11,7 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-secrets = {
-      url = "git+ssh://git@github.com/CtrlAltDefend/nix-secrets.git";
+      url = "git+ssh://git@github.com/CtrlAltDefend/nix-secrets.git?ref=refs/heads/master&rev=7e8bdfd168b6a70b5da8bd4a0f1164b5421bc492";
       flake = false;
     };
 

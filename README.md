@@ -83,5 +83,3 @@ apply
 │       └── bat.nix
 └── README.md
 ```
-y
-

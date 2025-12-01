@@ -19,8 +19,10 @@ in
     keyFile = "/home/god/.config/sops/age/keys.txt";
   };
 
-  sops.secrets.user_god_password = {
-    neededForUsers = true;
+  # All secrets in use has to be declared in this list
+  sops.secrets = {
+    user_god_password = { neededForUsers = true; };
+    wifi_nokiac20_password = { };
   };
 
   # Bootloader.
