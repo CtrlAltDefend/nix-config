@@ -19,5 +19,6 @@
     ./backup.nix
     ./docking-station.nix
     ./upower.nix
+    ./ollama.nix
   ];
 }
