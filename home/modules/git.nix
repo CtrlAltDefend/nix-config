@@ -3,8 +3,11 @@
 {
   programs.git = {
     enable = true;
-
-    userName = "billymeier92";
-    userEmail = "billymeier92@proton.me";
+    settings = {
+       user = {
+         email = "billymeier92@proton.me";
+         name = "billymeier92";
+       };
+    };
   };
 }
