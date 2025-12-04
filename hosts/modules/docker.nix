@@ -5,7 +5,7 @@
   # Enable Docker
   ######################
   virtualisation.docker.enable = true;
-
+  virtualisation.oci-containers.backend = "docker";
   ############################################
   # Example Docker container (your service)
   ############################################
@@ -15,4 +15,7 @@
   #};
 
   # Note: For reverse proxy management -> caddy.nix / hosts.nix  
+
+
+
 }

@@ -26,7 +26,6 @@
 #     arandr
      wlr-randr
 
-     kitty
      nautilus
 
      libreoffice-fresh
@@ -53,6 +52,8 @@
      # task management
      taskwarrior3
      taskwarrior-tui
+
+
    ];
 
   # TODO: store brave plugins (vimium, bitwarden) 

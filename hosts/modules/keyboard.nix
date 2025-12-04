@@ -6,4 +6,10 @@
     layout = "us";
     variant = "";
   };
+
+  # for Vial app
+  services.udev.extraRules = ''
+    # Vial keyboard access rule
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666"
+  '';
 }

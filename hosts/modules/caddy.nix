@@ -21,5 +21,12 @@
           reverse_proxy http://127.0.0.1:8222
       '';
     };
+
+    virtualHosts."ai" = {
+      extraConfig = ''
+          reverse_proxy http://127.0.0.1:3333
+      '';
+    };
+
   };
 }

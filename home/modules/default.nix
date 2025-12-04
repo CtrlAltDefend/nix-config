@@ -3,6 +3,7 @@
 {
   imports = [
     ./common.nix
+    ./kitty.nix
     ./hyprland.nix
     ./hyprdynamicmonitors.nix
     ./wofi.nix
@@ -14,5 +15,6 @@
     ./jetbrains.nix
     ./cava.nix
     ./age.nix
+    ./vial.nix
   ];
 }
