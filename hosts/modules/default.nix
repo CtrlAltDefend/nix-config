@@ -20,5 +20,7 @@
     ./docking-station.nix
     ./upower.nix
     ./ollama.nix
+    ./i2p.nix
+    ./transmission.nix
   ];
 }

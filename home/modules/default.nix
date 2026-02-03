@@ -16,5 +16,8 @@
     ./cava.nix
     ./age.nix
     ./vial.nix
+    ./tor.nix
+    ./i2p.nix
+    ./archive.nix
   ];
 }

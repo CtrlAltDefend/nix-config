@@ -9,8 +9,13 @@ path = "/org/freedesktop/UPower/devices/line_power_AC"
 [[power_events.dbus_signal_match_rules]]
 object_path = "/org/freedesktop/UPower/devices/line_power_AC"
 
-[profiles.docked]
-config_file = "/home/god/.flakes/home/modules/assets/.config/hyprdynamicmonitors/hyprconfigs/docked.go.tmpl"
-config_file_type = "template"
+#[profiles.docked]
+#config_file = "/home/god/.flakes/home/modules/assets/.config/hyprdynamicmonitors/hyprconfigs/docked.go.tmpl"
+#config_file_type = "template"
 
+[[profile.default.rules]]
+name = "eDP-1"
+mode = "1920x1080@60"
+position = "0x0"
+enabled = true
 

@@ -22,6 +22,7 @@
      ctop # like htop but for containers
      vlc
      unzip
+     unrar
      
 #     arandr
      wlr-randr
@@ -53,7 +54,7 @@
      taskwarrior3
      taskwarrior-tui
 
-
+     waveterm
    ];
 
   # TODO: store brave plugins (vimium, bitwarden) 

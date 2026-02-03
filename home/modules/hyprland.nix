@@ -18,11 +18,6 @@
      force = true;
    };
 
-   xdg.configFile."hyprdynamicmonitors/config.toml" = {
-     source = ./assets/.config/hyprdynamicmonitors/config.toml;
-     force = true;
-   };
-
    xdg.configFile."hypr/hypridle.conf" = {
      source = ./assets/.config/hypr/hypridle.conf;
      force = true;
