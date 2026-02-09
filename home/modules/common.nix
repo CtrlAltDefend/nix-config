@@ -14,6 +14,8 @@
      pavucontrol
 
      # utils
+     process-viewer # like htop but with GUI for humans
+
      direnv
      jq
      vim

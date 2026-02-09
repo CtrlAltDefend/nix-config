@@ -19,5 +19,6 @@
     ./tor.nix
     ./i2p.nix
     ./archive.nix
+    ./drawio.nix
   ];
 }
