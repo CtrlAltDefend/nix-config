@@ -21,5 +21,6 @@
     ./archive.nix
     ./drawio.nix
     ./trilium.nix
+    ./freshrss.nix
   ];
 }
