@@ -22,5 +22,6 @@
     ./ollama.nix
     ./i2p.nix
     ./transmission.nix
+    ./freshrss.nix
   ];
 }
