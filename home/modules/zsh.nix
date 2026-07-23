@@ -29,6 +29,9 @@
 
     # Extra shell functions go here
     initContent = ''
+      # Activate mise (adds shims to PATH)
+      eval "$(${pkgs.mise}/bin/mise activate zsh)"
+
       # --- Custom function ---
      apply() {
         #sudo nixos-rebuild switch --flake ~/.flakes#void && \
@@ -47,6 +50,8 @@
 
       # --- Load Powerlevel10k config if it exists ---
       [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+      eval "$(mise activate zsh)"
 
     '';
   };

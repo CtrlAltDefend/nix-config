@@ -39,24 +39,48 @@
      firefox
 
      # IDEs
-     mise
      vscode
+     pre-commit
+     hadolint
 
      # node
      nodejs_24
+     pnpm
+     yarn
+
+     # python
+     python313Packages.huggingface-hub
 
      # compilers
      gcc # required for mise
      gnumake # required for mise
      gnupg # required for mise
      python313 # required for mise
-
-
+     cmake
      # task management
      taskwarrior3
      taskwarrior-tui
 
      waveterm
+     
+     # AI
+     gpt-cli
+
+     # misc
+     discord
+
+     # disk utils
+     gnome-disk-utility
+
+#     packer
+#     ansible
+     
+     #screenshots
+     grim
+     swappy
+     slurp
+     flameshot
+     shotman
    ];
 
   # TODO: store brave plugins (vimium, bitwarden) 

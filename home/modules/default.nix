@@ -21,5 +21,8 @@
     ./archive.nix
     ./drawio.nix
     ./trilium.nix
+    ./java.nix
+    ./krita.nix
+    ./mise.nix
   ];
 }
