@@ -2,9 +2,12 @@
   description = "NixOS + Home Manager flake configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    #home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
+
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     sops-nix.url = "github:Mic92/sops-nix";
@@ -19,13 +22,59 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    shiki-src = {
+      url = "github:sazardev/shiki";
+      flake = false;
+    };
+
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, sops-nix, nix-secrets, hyprdynamicmonitors, nixos-hardware, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, sops-nix, nix-secrets, hyprdynamicmonitors, nixos-hardware, shiki-src, ... }:
     let
       system = "x86_64-linux";
+
+      overlays = [
+        (final: prev: {
+          shiki = prev.rustPlatform.buildRustPackage {
+            pname = "shiki";
+            version = "unstable";
+
+            src = shiki-src;
+
+            cargoLock = {
+              lockFile = shiki-src + "/Cargo.lock";
+            };
+
+            cargoBuildFlags = [
+              "-p"
+              "shiki-cli"
+            ];
+
+            cargoInstallFlags = [
+              "-p"
+              "shiki-cli"
+            ];
+
+            meta = with prev.lib; {
+              description = "Terminal note-taking application";
+              homepage = "https://github.com/sazardev/shiki";
+              license = licenses.mit;
+              mainProgram = "shiki";
+            };
+          };
+        })
+      ];
+
+
       #pkgs = nixpkgs.packages.${system};
-      pkgs = nixpkgs.legacyPackages.${system};
+      
+      # this worked
+      #pkgs = nixpkgs.legacyPackages.${system};
+       
+      pkgs = import nixpkgs {
+        inherit system;
+        inherit overlays;
+      };
     in {
       # -------------------------
       #  NixOS System
@@ -55,5 +104,7 @@
           extraSpecialArgs = { inherit inputs system; };
         };
       };
+
+
   };
 }

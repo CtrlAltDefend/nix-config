@@ -32,6 +32,11 @@
       # Activate mise (adds shims to PATH)
       eval "$(${pkgs.mise}/bin/mise activate zsh)"
 
+      # Playwright on NixOS
+      export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
+      export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS="true"
+      export PLAYWRIGHT_HOST_PLATFORM_OVERRIDE="ubuntu-24.04"    
+
       # --- Custom function ---
      apply() {
         #sudo nixos-rebuild switch --flake ~/.flakes#void && \

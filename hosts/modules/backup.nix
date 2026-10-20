@@ -19,12 +19,14 @@ in
   # Make script available system-wide
   environment.systemPackages = [
     backupScript
-    pkgs.rsync
   ];
 
   # Systemd service using the script in the Nix store
   systemd.services.nixos-backup = {
     description = "Backup Nix configuration";
+
+    path = [ pkgs.rsync ];
+   
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${backupScript}/bin/nixos-backup";

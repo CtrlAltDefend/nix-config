@@ -44,13 +44,16 @@ in
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.ssdm.enableGnomeKeyring = true;
 
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.guest.enable = true;
+
   # System user
   #users.mutableUsers = false; # Prevent users from changing password or whatever -> config as code! 
  
   users.users.god = {
     isNormalUser = true;
     description = "god";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers"];
     hashedPasswordFile = config.sops.secrets.user_god_password.path;
     shell = pkgs.zsh;
   };
@@ -86,6 +89,9 @@ in
     ccid # test
 
     libinput # test
+
+
+    openssl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

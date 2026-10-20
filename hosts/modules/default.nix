@@ -24,5 +24,6 @@
     ./transmission.nix
     ./tdlib.nix
     ./ai.nix
+    ./yggdrasil.nix
   ];
 }

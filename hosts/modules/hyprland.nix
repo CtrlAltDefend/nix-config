@@ -3,4 +3,6 @@
 {
   programs.hyprland.enable = true; # Enable hyprland system module
   programs.hyprland.xwayland.enable = true;
+  programs.uwsm.enable = true;
+  programs.hyprland.withUWSM = true;
 }

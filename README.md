@@ -22,7 +22,7 @@ Update /etc/nixos/configuration.nix like that:
 
 Copy the code in ~/Projects/nix/nix-config
 
-Move into that dir and then run the following commands.
+Move into that dir and then run the following commands.https://account.jetbrains.com/oauth/login?client_id=toolbox&response_type=code&scope=offline_access%20openid%20r_assets%20r_ide_auth&redirect_uri=https://account.jetbrains.com/oauth2/ide/callback&state=260491b3-3422-46e8-a4e5-e87105ab3d44&code_challenge=uEDbeYFA5cFlKO-9GJESR3Fh3HGKSwwA9vkQrCYtAsM&code_challenge_method=S256
 
 Apply the void hostname configuration by example:
 

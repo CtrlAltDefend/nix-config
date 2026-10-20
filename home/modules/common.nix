@@ -51,6 +51,11 @@
      # python
      python313Packages.huggingface-hub
 
+     # playwright e2e tests
+     playwright-driver.browsers
+     mesa
+
+
      # compilers
      gcc # required for mise
      gnumake # required for mise
@@ -81,7 +86,17 @@
      slurp
      flameshot
      shotman
+
+     # note taking tui
+#     shiki
    ];
 
-  # TODO: store brave plugins (vimium, bitwarden) 
+
+  home.sessionVariables = {
+    PLAYWRIGHT_BROWSERS_PATH = "${pkgs.playwright-driver.browsers}";
+    PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = "true";
+    PLAYWRIGHT_HOST_PLATFORM_OVERRIDE = "ubuntu-24.04";
+  };
+
+
 }

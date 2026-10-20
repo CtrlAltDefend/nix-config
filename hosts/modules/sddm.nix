@@ -5,9 +5,10 @@
 
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.sddm.theme = "where_is_my_sddm_theme";
+  services.displayManager.sddm.theme = "sddm-sugar-dark-theme";
 
   environment.systemPackages = with pkgs; [
-    where-is-my-sddm-theme
+    sddm-sugar-dark
+#    where-is-my-sddm-theme
   ];
 }

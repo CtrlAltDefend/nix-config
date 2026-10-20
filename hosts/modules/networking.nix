@@ -9,6 +9,11 @@ in
 
   networking.hostName = "void"; # Define your hostname.
 
+  networking.hosts = {
+    "10.2.56.39" = [ "rakun-test" ];
+    "10.2.56.38" = [ "rakun-prod" ];
+  };
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
